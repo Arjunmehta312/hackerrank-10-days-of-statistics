@@ -1,0 +1,15 @@
+import math
+
+tickets = 250
+students = 100
+mean = 2.4
+sd = 2
+
+mu = students * mean
+sigma = math.sqrt(students) * sd
+
+def normal_dist(x, mu, sigma):
+    '''Function to calculate the distribution'''
+    return 0.5 * (1 + math.erf((x - mu) / (sigma * math.sqrt(2))))
+
+print(round(normal_dist(x=tickets, mu=mu, sigma=sigma), 4))
